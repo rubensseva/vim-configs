@@ -34,6 +34,10 @@ call dein#end()
 " Colorsheme
 colorscheme desert
 
+" Linenumbering
+set number
+set relativenumber
+
 " Tabs and spaces and shit
 set autoindent
 set tabstop=4		" no. of spaces for tab in file
