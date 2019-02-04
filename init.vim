@@ -1,7 +1,6 @@
 " Config file for nvim with package manager dein
 
-
-
+" Dein packages
 set nocompatible
 set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim " path to dein.vim
 call dein#begin(expand('~/.vim/dein')) " plugins' root path
@@ -26,6 +25,13 @@ let g:deoplete#enable_at_startup = 1
 " and a lot more plugins.....
 call dein#end()
 
+call dein#add('scrooloose/nerdtree') " File explorer
+
+"Done with dein packages
+
+
+" Colorsheme
+colorscheme desert
 
 " Tabs and spaces and shit
 set autoindent
