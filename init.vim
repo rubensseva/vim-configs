@@ -16,6 +16,7 @@ call dein#add('Shougo/vimproc.vim', {
     \    },
     \ })
 call dein#add('Shougo/unite.vim')
+call dein#add('scrooloose/nerdtree') " File explorer
 
 call dein#add('Shougo/deoplete.nvim')
 if !has('nvim')
@@ -26,7 +27,6 @@ let g:deoplete#enable_at_startup = 1
 " and a lot more plugins.....
 call dein#end()
 
-call dein#add('scrooloose/nerdtree') " File explorer
 
 "Done with dein packages
 
