@@ -1,6 +1,7 @@
 " Config file for nvim with package manager dein
 
 " Dein packages
+" IN ORDER TO INSTALL THIS, ENTER IN VIM: :call dein#install()
 set nocompatible
 set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim " path to dein.vim
 call dein#begin(expand('~/.vim/dein')) " plugins' root path
