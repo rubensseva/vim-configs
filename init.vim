@@ -1,4 +1,5 @@
 " Config file for nvim with package manager dein
+" Testing a change, just remove this line
 
 " Dein packages
 " IN ORDER TO INSTALL THIS, ENTER IN VIM: :call dein#install()
