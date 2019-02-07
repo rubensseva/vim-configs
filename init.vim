@@ -27,8 +27,14 @@ let g:deoplete#enable_at_startup = 1
 " and a lot more plugins.....
 call dein#end()
 
-
+" JavaScript packages, mostly syntax
+call dein#add('pangloss/vim-javascript')
+call dein#add('mxw/vim-jsx')
 "Done with dein packages
+
+"Tab completion for deoplete
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 
 " Colorsheme
