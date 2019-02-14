@@ -1,41 +1,43 @@
-" Config file for nvim with package manager dein
-" Testing a change, just remove this line
+" Vim-plug section start
+" -------------------------------------------------------------------------------------
 
-" Dein packages
-" IN ORDER TO INSTALL THIS, ENTER IN VIM: :call dein#install()
-set nocompatible
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim " path to dein.vim
-call dein#begin(expand('~/.vim/dein')) " plugins' root path
-call dein#add('Shougo/dein.vim')
-call dein#add('Shougo/vimproc.vim', {
-    \ 'build': {
-    \     'windows': 'tools\\update-dll-mingw',
-    \     'cygwin': 'make -f make_cygwin.mak',
-    \     'mac': 'make -f make_mac.mak',
-    \     'linux': 'make',
-    \     'unix': 'gmake',
-    \    },
-    \ })
-call dein#add('Shougo/unite.vim')
-call dein#add('scrooloose/nerdtree') " File explorer
+" Install vim-plug automatically
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-call dein#add('Shougo/deoplete.nvim')
-if !has('nvim')
-  call dein#add('roxma/nvim-yarp')
-  call dein#add('roxma/vim-hug-neovim-rpc')
+call plug#begin('~/.local/share/nvim/plugged')
+
+" Install deoplete
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
-" and a lot more plugins.....
-call dein#end()
 
-" JavaScript packages, mostly syntax
-call dein#add('pangloss/vim-javascript')
-call dein#add('mxw/vim-jsx')
-"Done with dein packages
+" Install prettier
+Plug 'prettier/vim-prettier', { 'do': 'nom install' }
 
-"Tab completion for deoplete
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" Install Ale
+Plug 'w0rp/ale'
+
+" Intall NERDTree
+Plug 'scrooloose/nerdtree'
+
+" Install vim-javascript
+Plug 'pangloss/vim-javascript'
+
+call plug#end()
+
+" -------------------------------------------------------------------------------------
+" Vim-plug section end
+
+
 
 
 " Colorsheme
@@ -47,6 +49,10 @@ set relativenumber
 
 " Tabs and spaces and shit
 set autoindent
-set tabstop=4		" no. of spaces for tab in file
-set shiftwidth=4	" no. of spaced for step in autoindent
-set softtabstop=4	" no. of spaces for tab when editing
+set tabstop=2		" no. of spaces for tab in file
+set shiftwidth=2	" no. of spaced for step in autoindent
+set softtabstop=2	" no. of spaces for tab when editing
+
+
+
+
