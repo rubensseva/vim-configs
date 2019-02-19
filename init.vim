@@ -31,6 +31,8 @@ call plug#end()
 " -------------------------------------------------------------------------------------
 " Vim-plug section end
 
+" Tab complete for deoplete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " Colorsheme
 colorscheme desert
