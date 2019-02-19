@@ -1,13 +1,6 @@
 " Vim-plug section start
 " -------------------------------------------------------------------------------------
 
-" Install vim-plug automatically
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Install deoplete
@@ -19,9 +12,6 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
-
-" Install prettier
-Plug 'prettier/vim-prettier', { 'do': 'nom install' }
 
 " Install Ale
 Plug 'w0rp/ale'
@@ -36,8 +26,6 @@ call plug#end()
 
 " -------------------------------------------------------------------------------------
 " Vim-plug section end
-
-
 
 
 " Colorsheme
