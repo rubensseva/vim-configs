@@ -22,6 +22,10 @@ Plug 'scrooloose/nerdtree'
 " Install vim-javascript
 Plug 'pangloss/vim-javascript'
 
+" Get fzf plugin from fzf
+" This assumes fzf is installed
+Plug '~/.fzf'
+
 call plug#end()
 
 " -------------------------------------------------------------------------------------
