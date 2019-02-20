@@ -49,7 +49,7 @@ set autoindent
 set tabstop=2		" no. of spaces for tab in file
 set shiftwidth=2	" no. of spaced for step in autoindent
 set softtabstop=2	" no. of spaces for tab when editing
-
+set expandtab " set spaces instead of tabs
 
 
 
