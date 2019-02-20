@@ -19,10 +19,13 @@ Plug 'w0rp/ale'
 " Intall NERDTree
 Plug 'scrooloose/nerdtree'
 
+" JavaScript, react, jsx specific plugins
 " Install vim-javascript
 Plug 'pangloss/vim-javascript'
+" Install vim-jsx to fix some weird jsx syntax errors
+Plug 'mxw/vim-jsx'
 
-" Get fzf plugin from fzf
+" Install fzf
 " This assumes fzf is installed
 Plug '~/.fzf'
 
