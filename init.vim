@@ -29,6 +29,15 @@ Plug 'mxw/vim-jsx'
 " This assumes fzf is installed
 Plug '~/.fzf'
 
+" Install lightline
+Plug 'itchyny/lightline.vim'
+
+" Install vim-multiple-cursors
+Plug 'terryma/vim-multiple-cursors'
+
+" Install gitgutter
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
 " -------------------------------------------------------------------------------------
