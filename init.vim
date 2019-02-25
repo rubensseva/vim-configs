@@ -46,6 +46,9 @@ call plug#end()
 " Tab complete for deoplete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
+" Nerdtree toggle to <ctrl-O>
+map <C-o> :NERDTreeToggle<CR>
+
 " Colorsheme
 colorscheme desert
 
