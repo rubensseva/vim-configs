@@ -38,6 +38,10 @@ Plug 'terryma/vim-multiple-cursors'
 " Install gitgutter
 Plug 'airblade/vim-gitgutter'
 
+" Install vim fugitive
+" Comprehensiv git plugin
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 " -------------------------------------------------------------------------------------
