@@ -53,6 +53,14 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " Nerdtree toggle to <ctrl-O>
 map <C-o> :NERDTreeToggle<CR>
 
+" Make lightline show full path
+let g:lightline = { 
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+      \ }
+      \ }
+
+
 " Colorsheme
 colorscheme desert
 
