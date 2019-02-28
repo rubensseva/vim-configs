@@ -42,6 +42,12 @@ Plug 'airblade/vim-gitgutter'
 " Comprehensiv git plugin
 Plug 'tpope/vim-fugitive'
 
+" Install some more colorschemes :)                                                                            
+Plug 'rafi/awesome-vim-colorschemes'                                                                           
+                                                                                                                 
+" Show lines for indents                                                                                       
+Plug 'Yggdroot/indentLine'                                                                                                  
+
 call plug#end()
 
 " -------------------------------------------------------------------------------------
@@ -65,9 +71,17 @@ let g:lightline = {
 " Set fixers
 let g:ale_fixers = {'javascript': ['eslint']}
 
-
-" Colorsheme
-colorscheme desert
+" Colorshemes                                                                                                       
+" favorites:                                                                                                       
+" happy_hacking                                                                                                    
+" desert                                                                                                           
+" minimalist                                                                                                       
+" gruvbox (but should be dark mode?)                                                                               
+" molokayo                                                                                                         
+" pablo                                                                                                            
+colorscheme OceanicNext                                                                                            
+set background=dark                                                                                                
+set termguicolors   
 
 " Linenumbering
 set number
