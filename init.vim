@@ -61,6 +61,11 @@ let g:lightline = {
       \ }
 
 
+" Ale configuration
+" Set fixers
+let g:ale_fixers = {'javascript': ['eslint']}
+
+
 " Colorsheme
 colorscheme desert
 
