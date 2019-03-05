@@ -13,8 +13,9 @@ else
 endif
 let g:deoplete#enable_at_startup = 1
 
-" Install Ale
-Plug 'w0rp/ale'
+
+" install tabnine                                                                                    
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }    
 
 " Intall NERDTree
 Plug 'scrooloose/nerdtree'
