@@ -13,9 +13,12 @@ else
 endif
 let g:deoplete#enable_at_startup = 1
 
+" install tabnine
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
-" install tabnine                                                                                    
-Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }    
+
+" Install Ale
+Plug 'w0rp/ale'
 
 " Intall NERDTree
 Plug 'scrooloose/nerdtree'
@@ -43,11 +46,8 @@ Plug 'airblade/vim-gitgutter'
 " Comprehensiv git plugin
 Plug 'tpope/vim-fugitive'
 
-" Install some more colorschemes :)                                                                            
-Plug 'rafi/awesome-vim-colorschemes'                                                                           
-                                                                                                                 
-" Show lines for indents                                                                                       
-Plug 'Yggdroot/indentLine'                                                                                                  
+" Install some more colorschemes :) 
+Plug 'rafi/awesome-vim-colorschemes'
 
 call plug#end()
 
@@ -61,28 +61,33 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 map <C-o> :NERDTreeToggle<CR>
 
 " Make lightline show full path
-let g:lightline = { 
+let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
       \ }
       \ }
 
-
 " Ale configuration
+" Set fixers
 " Set fixers
 let g:ale_fixers = {'javascript': ['eslint']}
 
-" Colorshemes                                                                                                       
-" favorites:                                                                                                       
-" happy_hacking                                                                                                    
-" desert                                                                                                           
-" minimalist                                                                                                       
-" gruvbox (but should be dark mode?)                                                                               
-" molokayo                                                                                                         
-" pablo                                                                                                            
-colorscheme OceanicNext                                                                                            
-set background=dark                                                                                                
-set termguicolors   
+
+" Colorsheme
+" favorites:
+" happy_hacking
+" desert
+" minimalist
+" gruvbox (but should be dark mode?)
+" molokayo
+" pablo
+colorscheme gruvbox
+set background=dark
+set termguicolors
+
+" set vim cursor block or line depending on mode
+:autocmd InsertEnter * set cul
+:autocmd InsertLeave * set nocul
 
 " Linenumbering
 set number
@@ -94,6 +99,8 @@ set tabstop=2		" no. of spaces for tab in file
 set shiftwidth=2	" no. of spaced for step in autoindent
 set softtabstop=2	" no. of spaces for tab when editing
 set expandtab " set spaces instead of tabs
+
+
 
 
 
