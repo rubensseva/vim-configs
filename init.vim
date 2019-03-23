@@ -7,7 +7,10 @@
 " will have wrong colors in gvim. 
 " TODO: remove code concerning non working gvim compatability
 
-
+" Requirements: 
+"   - terminal neovim
+"   - vim-plug 
+"   - nerd fonts
 
 
 "       *********************************************
