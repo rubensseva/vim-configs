@@ -125,7 +125,6 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'ryanoasis/vim-devicons'
 
 
-
 call plug#end()
 
 " -------------------------------------------------------------------------------------
@@ -136,7 +135,6 @@ call plug#end()
 
 syn match NERDTreeTxtFile #^\s\+.*txt$#
 hi def link NERDTreeTxtFile error
-
 
 
 " Make lightline show full path let g:lightline = { \ 'active': { \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' , 'fugitive']], 
