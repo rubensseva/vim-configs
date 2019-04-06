@@ -7,10 +7,7 @@
 " will have wrong colors in gvim. 
 " TODO: remove code concerning non working gvim compatability
 
-" Requirements: 
-"   - terminal neovim
-"   - vim-plug 
-"   - nerd fonts
+
 
 
 "       *********************************************
@@ -63,8 +60,11 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'airblade/vim-gitgutter'
 
     " Install vim fugitive
-    " Comprehensiv git plugin
+    " Comprehensive git plugin
     Plug 'tpope/vim-fugitive'
+
+    " Install java completion
+    Plug 'artur-shaik/vim-javacomplete2'
 
     " Get a fresh start screen
     Plug 'mhinz/vim-startify'
@@ -175,6 +175,9 @@ hi def link NERDTreeTxtFile error
     set softtabstop=2	" no. of spaces for tab when editing
     set expandtab " set spaces instead of tabs
 
+" For buffers
+    " set hidden
+
 " Make vim remember cursor position
     " Usually we would configure .viminfo, but startify plugins handles this
     "So these lines are commented out
@@ -209,6 +212,8 @@ hi def link NERDTreeTxtFile error
     " Vimrc stuff
     :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
     :nnoremap <leader>sv :source $MYVIMRC<cr>
+    " FZF command
+    nnoremap <leader>fe :FZF<cr>
 
 " Colorsheme
     " Create a dictionary of the colors for later use
@@ -311,3 +316,5 @@ hi def link NERDTreeTxtFile error
           \'seagreen': ['']
         \}
         call DeviconsColors(g:devicons_colors)
+
+
