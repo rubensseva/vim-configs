@@ -2,9 +2,6 @@
 " This is very a much a work in progress so expect to find a lot of errors and
 " bad practice in this file.
 
-" I use vim in terminal, some of the code is copy-pasted wizard code
-" which seemingly handles gvim, but this is not the case. Devicons colors
-" will have wrong colors in gvim. 
 " TODO: remove code concerning non working gvim compatability
 
 
@@ -72,54 +69,11 @@ call plug#begin('~/.local/share/nvim/plugged')
     " Get a fresh start screen
     Plug 'mhinz/vim-startify'
 
+    " Get solarized scheme
     Plug 'altercation/vim-colors-solarized'
-        " Create a dictionary of the colors for later use
-        " Last colors for gui are wrong
-        let g:sol = {
-          \"gui": {
-            \"base03": "#002b36",
-            \"base02": "#073642",
-            \"base01": "#586e75",
-            \"base00": "#657b83",
-            \"base0": "#839496",
-            \"base1": "#93a1a1",
-            \"base2": "#eee8d5",
-            \"base3": "#fdf6e3",
-            \"yellow": "#b58900",
-            \"orange": "#cb4b16",
-            \"red": "#dc322f",
-            \"magenta": "#d33682",
-            \"violet": "#6c71c4",
-            \"blue": "#268bd2",
-            \"cyan": "#2aa198",
-            \"green": "#719e07",
-            \"purple": "#dc323f",
-            \"turquoise": "#dc324f",
-            \"seagreen": "#dc326f"
-          \},
-          \"cterm": {
-            \"base03": 8,
-            \"base02": 0,
-            \"base01": 10,
-            \"base00": 11,
-            \"base0": 12,
-            \"base1": 14,
-            \"base2": 7,
-            \"base3": 15,
-            \"yellow": 3,
-            \"orange": 9,
-            \"red": 1,
-            \"magenta": 5,
-            \"violet": 13,
-            \"blue": 4,
-            \"cyan": 6,
-            \"green": 2,
-            \"purple": 56,
-            \"turquoise": 44,
-            \"seagreen": 84
-          \}
-        \}
 
+    " Get gruvbox theme
+    Plug 'morhetz/gruvbox'
 
     " Install file icon
     Plug 'ryanoasis/vim-devicons'
@@ -338,7 +292,7 @@ hi def link NERDTreeTxtFile error
     " pablo
     " gruvbox
     set background=dark
-    colorscheme solarized
+    colorscheme gruvbox
     
     " Configure colors for devicons
     " This dependends on the color dictionary created earlier
