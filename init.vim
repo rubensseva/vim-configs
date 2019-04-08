@@ -60,9 +60,6 @@ call plug#begin('~/.local/share/nvim/plugged')
     " Comprehensive git plugin
     Plug 'tpope/vim-fugitive'
 
-    " Install java completion
-    Plug 'artur-shaik/vim-javacomplete2'
-
     " Install ternjs completion, and node tern package
     Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
@@ -106,10 +103,6 @@ hi def link NERDTreeTxtFile error
 " For java completion
     filetype plugin indent on
     set omnifunc=syntaxcomplete#Complete
-
-" JavaComplete
-    autocmd FileType java setlocal omnifunc=javacomplete#Complete<Paste>
-
 
 " Ternjs configs
     " Set bin if you have many instalations
