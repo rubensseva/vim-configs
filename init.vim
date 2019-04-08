@@ -61,7 +61,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'tpope/vim-fugitive'
 
     " Install ternjs completion, and node tern package
-    Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+    " This plugin needs node and npm tern to be installed globally
+    Plug 'carlitux/deoplete-ternjs'
 
     " Get a fresh start screen
     Plug 'mhinz/vim-startify'
