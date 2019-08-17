@@ -56,13 +56,10 @@ call plug#begin('~/.local/share/nvim/plugged')
     " Install gitgutter
     Plug 'airblade/vim-gitgutter'
 
-    " Install vim fugitive
-    " Comprehensive git plugin
+    " Install tpope plugins
     Plug 'tpope/vim-fugitive'
-
-    " Install ternjs completion, and node tern package
-    " This plugin needs node and npm tern to be installed globally
-    Plug 'carlitux/deoplete-ternjs'
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-commentary'
 
     " Get a fresh start screen
     Plug 'mhinz/vim-startify'
