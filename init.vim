@@ -2,8 +2,6 @@
 " This is very a much a work in progress so expect to find a lot of errors and
 " bad practice in this file.
 
-" TODO: remove code concerning non working gvim compatability
-
 
 
 
@@ -73,6 +71,13 @@ call plug#begin('~/.local/share/nvim/plugged')
     " Install file icon
     Plug 'ryanoasis/vim-devicons'
 
+    " Install diffchanges
+    Plug 'plytophogy/vim-diffchanges'
+
+    " Install C completions
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'zchee/deoplete-clang'
+
 
 call plug#end()
 
@@ -102,64 +107,10 @@ hi def link NERDTreeTxtFile error
     filetype plugin indent on
     set omnifunc=syntaxcomplete#Complete
 
-" Ternjs configs
-    " Set bin if you have many instalations
-    let g:deoplete#sources#ternjs#tern_bin = '/path/to/tern_bin'
-    let g:deoplete#sources#ternjs#timeout = 1
-
-    " Whether to include the types of the completions in the result data. Default: 0
-    let g:deoplete#sources#ternjs#types = 1
-
-    " Whether to include the distance (in scopes for variables, in prototypes for 
-    " properties) between the completions and the origin position in the result 
-    " data. Default: 0
-    let g:deoplete#sources#ternjs#depths = 1
-
-    " Whether to include documentation strings (if found) in the result data.
-    " Default: 0
-    let g:deoplete#sources#ternjs#docs = 1
-
-    " When on, only completions that match the current word at the given point will
-    " be returned. Turn this off to get all results, so that you can filter on the 
-    " client side. Default: 1
-    let g:deoplete#sources#ternjs#filter = 0
-
-    " Whether to use a case-insensitive compare between the current word and 
-    " potential completions. Default 0
-    let g:deoplete#sources#ternjs#case_insensitive = 1
-
-    " When completing a property and no completions are found, Tern will use some 
-    " heuristics to try and return some properties anyway. Set this to 0 to 
-    " turn that off. Default: 1
-    let g:deoplete#sources#ternjs#guess = 0
-
-    " Determines whether the result set will be sorted. Default: 1
-    let g:deoplete#sources#ternjs#sort = 0
-
-    " When disabled, only the text before the given position is considered part of 
-    " the word. When enabled (the default), the whole variable name that the cursor
-    " is on will be included. Default: 1
-    let g:deoplete#sources#ternjs#expand_word_forward = 0
-
-    " Whether to ignore the properties of Object.prototype unless they have been 
-    " spelled out by at least two characters. Default: 1
-    let g:deoplete#sources#ternjs#omit_object_prototype = 0
-
-    " Whether to include JavaScript keywords when completing something that is not 
-    " a property. Default: 0
-    let g:deoplete#sources#ternjs#include_keywords = 1
-
-    " If completions should be returned when inside a literal. Default: 1
-    let g:deoplete#sources#ternjs#in_literal = 0
-
-
-    "Add extra filetypes
-    let g:deoplete#sources#ternjs#filetypes = [
-                    \ 'jsx',
-                    \ 'javascript.jsx',
-                    \ 'vue',
-                    \ '...'
-                    \ ]
+" For C completion
+    let g:deoplete#enable_at_startup = 1
+    let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+    let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
 
 
 "       *********************************************
@@ -174,10 +125,6 @@ hi def link NERDTreeTxtFile error
 " set vim cursor block or line depending on mode
     :autocmd InsertEnter * set cul
     :autocmd InsertLeave * set nocul
-
-" Linenumbering
-    set number
-    set relativenumber
 
 " Tabs and spaces
     set autoindent
@@ -217,7 +164,7 @@ hi def link NERDTreeTxtFile error
     nnoremap <space> = <NOP>
     let mapleader = " "
     " Nerdtree
-    map <C-o> :NERDTreeToggle<CR>
+    map <C-k> :NERDTreeToggle<CR>
     " Deoplete
     inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
     " Vimrc stuff
@@ -327,5 +274,4 @@ hi def link NERDTreeTxtFile error
           \'seagreen': ['']
         \}
         call DeviconsColors(g:devicons_colors)
-
 
